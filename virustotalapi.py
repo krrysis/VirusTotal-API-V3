@@ -31,14 +31,4 @@ else:
     
     print('\x1b[1;33;40m' +'\n🟡 NO DATA FOUND' + '\x1b[0m')
 
-'''    
-if Malicious[-1] > 0:
-    print('\x1b[31m'+"MALICIOUS \n"+'\x1b[0m')
-    #print(Malicious,"\n",Undetected)
-    print("Malicious: ",Malicious[-1])
-    print("Undetected: ",Undetected[-1])
-else:
-    print('\x1b[32m'+'CLEAN \n'+'\x1b[0m')
-    print(Malicious,"\n",Undetected)
-'''
 input("\n press ENTER to exit")
