@@ -22,6 +22,7 @@ A9DE3F84F861EFA77C7082CFF0C1AE9BFE305194CA67548EB4FDE8EB00444DCA
 PS D:\virustotal> python.exe .\virustotalapi.py
 Search files, URLs, domains, IPs and tag comments:
 google.com
+
 🟢 CLEAN
 
 Malicious:  0
@@ -31,6 +32,7 @@ Undetected:  10
 PS D:\virustotal> python.exe .\virustotalapi.py
 Search files, URLs, domains, IPs and tag comments:
 f1a5a1187624fcf1a5804b9a15a4734d9da5aaf6
+
 🔴 MALICIOUS
 
 Malicious:  29
