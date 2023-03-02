@@ -17,12 +17,14 @@ def vt():
     if len(data["data"]) > 0:
         Malicious=("Malicious:", data["data"][0]["attributes"]["last_analysis_stats"]['malicious'])
         Undetected=("Undetected:", data["data"][0]["attributes"]["last_analysis_stats"]['undetected'])
+        Sha1=("SHA1:", data["data"][0]["attributes"]["sha1"])
 
         if Malicious[-1] > 0:
             print('\x1b[31m'+"🔴 MALICIOUS \n"+'\x1b[0m')
             #print(Malicious,"\n",Undetected)
             print("Malicious: ",Malicious[-1])
             print("Undetected: ",Undetected[-1])
+            print("SHA1: ",Sha1[-1])
         else:
             print('\x1b[32m'+'🟢 CLEAN \n'+'\x1b[0m')
             #print(Malicious,"\n",Undetected)
