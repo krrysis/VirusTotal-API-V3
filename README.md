@@ -1,4 +1,7 @@
 # VirusTotal-API-V3
+can't search for files yet.
+can give back sha1 hashes from sha256.
+
 Uses VirusTotal API V3 for basic search functionalities
 VirusTotal Public API constraints and restrictions
 
