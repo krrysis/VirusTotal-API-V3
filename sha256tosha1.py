@@ -7,6 +7,8 @@ import csv
 with open('ioc.csv', newline='') as f:
     reader = csv.reader(f)
     ioclist = [item for sublist in reader for item in sublist]
+    #print total sha/md5 values
+    print("total number of sha256/md5 values is: ",len(ioclist))
 #blank output list which will be used to write to output csv file
 outputlist=[]
 
@@ -30,8 +32,10 @@ for i in range(len(ioclist)):
     if len(data["data"]) > 0:
         Sha1=("SHA1:", data["data"][0]["attributes"]["sha1"])
         outputlist.append(Sha1[-1])
+        print("#",i," sha value found, added to file.")
     else:
         pass
+        print("#",i,"data not found, skipping")
     #print(outputlist)
     #print(data)
     
