@@ -13,6 +13,7 @@ outputlist=[]
 #loop to get sha1 from sha256 into a list
 for i in range(len(ioclist)):
     x=ioclist[i]
+    #print(x)
     url = "https://www.virustotal.com/api/v3/search?query="+x
     headers = {
             "accept": "application/json",
@@ -20,16 +21,20 @@ for i in range(len(ioclist)):
         }
     response = requests.get(url, headers=headers)
     data=response.json()
-    
+    #print(data)
     pattern = r"^((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$"
     url_pattern = r"(https?://)?(www\.)?([a-zA-Z0-9]+(-?[a-zA-Z0-9])*\.)+[a-z]{2,}(/[\w\-]*)*"
     regex = re.compile(pattern)
     regexurl = re.compile(url_pattern)
+    
     if len(data["data"]) > 0:
         Sha1=("SHA1:", data["data"][0]["attributes"]["sha1"])
-    outputlist.append(Sha1[-1])
+        outputlist.append(Sha1[-1])
+    else:
+        pass
     #print(outputlist)
     #print(data)
+    
 
 #this will write outputlist to csv file
 with open('sha1.csv', 'w', newline='') as file:
