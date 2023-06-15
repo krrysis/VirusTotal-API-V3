@@ -19,7 +19,7 @@ for i in range(len(ioclist)):
     url = "https://www.virustotal.com/api/v3/search?query="+x
     headers = {
             "accept": "application/json",
-            "x-apikey": "1664211c7353df910d72ad121809dd94feb632ad198c361bfc53c6c640f8d540"
+            "x-apikey": "put your api key between the double quotes"
         }
     response = requests.get(url, headers=headers)
     data=response.json()
@@ -32,15 +32,16 @@ for i in range(len(ioclist)):
     if len(data["data"]) > 0:
         Sha1=("SHA1:", data["data"][0]["attributes"]["sha1"])
         outputlist.append(Sha1[-1])
-        print("#",i," sha value found, added to file.")
+        print("#",i+1,"✅")
     else:
         pass
-        print("#",i,"data not found, skipping")
+        print("#",i+1,"❌")
     #print(outputlist)
     #print(data)
     
-
+print("Writing to file...")
 #this will write outputlist to csv file
 with open('sha1.csv', 'w', newline='') as file:
     writer = csv.writer(file)
     writer.writerows([[value] for value in outputlist])
+print("Operation completed. Sha1 saved to sha1.csv"," 🔥")

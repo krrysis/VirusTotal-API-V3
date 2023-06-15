@@ -40,3 +40,13 @@ f1a5a1187624fcf1a5804b9a15a4734d9da5aaf6
 
 Malicious:  29
 Undetected:  39
+
+
+# vtsingle
+searches single files at time
+
+# vtmultiple
+give multiple ips /shas in a csv to search them all
+
+# md5sha256tosha1
+covert md5/sha256 to sha1
