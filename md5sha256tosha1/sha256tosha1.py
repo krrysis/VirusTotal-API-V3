@@ -1,3 +1,6 @@
+#author: Kshitij
+#github: https://github.com/krrysis
+#email: kshitijshukla345@gmail.com
 import requests
 import json
 import re
