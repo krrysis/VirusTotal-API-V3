@@ -1,3 +1,7 @@
+#author: Kshitij
+#github: https://github.com/krrysis
+#email: kshitijshukla345@gmail.com
+
 import os
 import requests
 import csv
