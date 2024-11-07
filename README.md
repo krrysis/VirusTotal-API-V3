@@ -50,3 +50,6 @@ give multiple ips /shas in a csv to search them all
 
 # md5sha256tosha1
 covert md5/sha256 to sha1
+
+# vtfilechecker
+takes a folder, uploads on VT, outputs results in CSV
