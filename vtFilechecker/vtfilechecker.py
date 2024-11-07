@@ -9,7 +9,7 @@ import time
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from requests_toolbelt.multipart.encoder import MultipartEncoder, MultipartEncoderMonitor
 
-API_KEY = '1664211c7353df910d72ad121809dd94feb632ad198c361bfc53c6c640f8d540'
+API_KEY = ''
 API_UPLOAD_URL = 'https://www.virustotal.com/api/v3/files'
 API_UPLOAD_URL_LARGE = 'https://www.virustotal.com/api/v3/files/upload_url'
 API_ANALYSIS_URL = 'https://www.virustotal.com/api/v3/analyses'
